@@ -29,7 +29,7 @@ const quotes = [
     },
     {
         id: 5,
-        text: "সিঁড়ির লাইটটা অফ রাখলেই তো হয়, বেকার জ্বলে ওইটা। আমার হার্ট জ্বলে।",
+        text: "সিঁড়ির লাইটটা অফ রাখলেই তো হয়, বেকার জ্বলে ওইটা।",
         context: "Energy Saving"
     }
 ];
@@ -39,7 +39,7 @@ const BaniSection = () => {
         <section className="bani-section">
             <div className="bani-header">
                 <p className="bani-subtitle">Words of Wisdom</p>
-                <h2 className="bani-title">CEO বাণী</h2>
+                <h2 className="bani-title"><span>বানী'স</span> of CEO</h2>
             </div>
 
             <div className="bani-grid">
@@ -47,7 +47,7 @@ const BaniSection = () => {
                     <div key={quote.id} className="bani-card">
                         <span className="quote-icon">“</span>
                         <p className="bani-text">{quote.text}</p>
-                        <span className="bani-author">- মফিকুল আলম <span>(CEO)</span></span>
+                        <span className="bani-author">- মাফিকুল আলম <span>(CEO)</span></span>
                     </div>
                 ))}
             </div>
