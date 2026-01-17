@@ -18,10 +18,12 @@ const Hero = () => {
 
                 <div className="hero-text-content">
                     <h1 className="hero-title">
-                        <span>Visionary Leader</span>
+                        <span>The One & Only</span>
                         Mafikul Alom
+                        <small className="hero-visionary">Visionary Leader</small>
                     </h1>
-                    <p className="hero-subtitle">CEO of Alom Group & Industry</p>
+                    <div className="hero-ceo-badge">CEO</div>
+                    <p className="hero-subtitle">Alom Group & Industry (Bachelor Mess)</p>
                 </div>
             </div>
 

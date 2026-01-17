@@ -4,11 +4,16 @@ import './BaniSection.css';
 const quotes = [
     {
         id: 1,
+        text: "কমদামি চাল খাইলে ঘুম ভালো হয়, আর ঘুম ভালো হইলে আইডিয়া ভালো আসে। মিল রেটও বাঁচে।",
+        context: "Economic Nutrition"
+    },
+    {
+        id: 2,
         text: "মিলের রেট কমাতে চাইলে ডিমের বিকল্প নাই। সকাল-বিকাল ডিম, বুদ্ধি হবে অসীম।",
         context: "Meal Rate Strategy"
     },
     {
-        id: 2,
+        id: 3,
         text: "রাত ১১টার পর ডাইনিংয়ের লাইট যে জ্বালাবে, তার মিল অফ। কারেন্ট বিল কি তোর ফুপা দিবে?",
         context: "Cost Cutting"
     },
