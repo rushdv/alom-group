@@ -1,5 +1,4 @@
 import React from 'react';
-import './BaniSection.css';
 
 const quotes = [
     {
@@ -36,18 +35,22 @@ const quotes = [
 
 const BaniSection = () => {
     return (
-        <section className="bani-section">
-            <div className="bani-header">
-                <p className="bani-subtitle">Words of Wisdom</p>
-                <h2 className="bani-title">CEO বাণী</h2>
+        <section className="bg-base-charcoal-light py-24 px-6 text-center border-t border-white/5">
+            <div className="mb-16">
+                <p className="text-brand-orange text-lg font-semibold tracking-[2px] uppercase mb-4">Words of Wisdom</p>
+                <h2 className="text-base-white text-5xl font-bold uppercase">CEO বাণী</h2>
             </div>
 
-            <div className="bani-grid">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
                 {quotes.map((quote) => (
-                    <div key={quote.id} className="bani-card">
-                        <span className="quote-icon">“</span>
-                        <p className="bani-text">{quote.text}</p>
-                        <span className="bani-author">- মাফিকুল আলম <span>(CEO)</span></span>
+                    <div key={quote.id} className="group relative bg-base-charcoal p-12 rounded-card border border-white/5 shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-brand-orange">
+                        <span className="absolute top-4 left-6 text-brand-orange/20 text-7xl font-serif leading-none italic select-none">“</span>
+                        <p className="font-solaiman text-2xl text-base-off-white leading-relaxed font-medium z-10 relative">
+                            {quote.text}
+                        </p>
+                        <span className="block mt-8 text-base-off-white/40 font-bold text-sm tracking-wide z-10 relative">
+                            - মাফিকুল আলম <span className="text-brand-orange font-normal">(CEO)</span>
+                        </span>
                     </div>
                 ))}
             </div>

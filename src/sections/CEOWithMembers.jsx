@@ -1,5 +1,4 @@
 import React from 'react';
-import './CEOWithClients.css'; // Reusing the same CSS as it works perfect
 
 const memberInteractions = [
     {
@@ -42,25 +41,25 @@ const memberInteractions = [
 
 const CEOWithMembers = () => {
     return (
-        <section className="clients-section">
-            <div className="clients-header">
-                <p className="clients-subtitle">Mess Management</p>
-                <h2 className="clients-title">CEO <span>vs</span> Members</h2>
+        <section className="bg-base-charcoal py-24 px-6 border-t border-white/5">
+            <div className="text-center mb-16">
+                <p className="text-brand-orange text-lg font-semibold tracking-[2px] uppercase mb-4 font-inter">Mess Management</p>
+                <h2 className="text-base-white text-5xl font-bold uppercase font-oswald text-shadow-glow">CEO <span className="text-brand-orange">vs</span> Members</h2>
             </div>
 
-            <div className="clients-grid">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
                 {memberInteractions.map((item) => (
-                    <div key={item.id} className="client-card">
-                        <span className="client-type-badge">{item.memberType}</span>
+                    <div key={item.id} className="group bg-base-charcoal-light rounded-card p-8 border border-white/5 transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 relative overflow-hidden">
+                        <span className="inline-block bg-white/10 text-base-off-white/60 text-[0.65rem] px-3 py-1 rounded-full uppercase tracking-widest mb-6 font-bold">{item.memberType}</span>
 
-                        <div className="interaction-block">
-                            <span className="interaction-label">Member Says:</span>
-                            <p className="client-says">"{item.memberAsk}"</p>
+                        <div className="mb-6">
+                            <span className="block text-[0.7rem] uppercase text-white/30 font-bold mb-2 tracking-tighter">Member Says:</span>
+                            <p className="font-inter italic text-base-off-white/80 pl-4 border-l-2 border-white/20">"{item.memberAsk}"</p>
                         </div>
 
-                        <div className="interaction-block">
-                            <span className="interaction-label" style={{ color: 'var(--brand-orange)' }}>CEO Replies:</span>
-                            <p className="ceo-replies">"{item.ceoReply}"</p>
+                        <div className="bg-brand-orange/5 p-4 rounded-lg border border-brand-orange/10">
+                            <span className="block text-[0.7rem] uppercase text-brand-orange font-bold mb-2 tracking-tighter">CEO Replies:</span>
+                            <p className="font-solaiman text-brand-orange text-lg font-semibold leading-relaxed">"{item.ceoReply}"</p>
                         </div>
                     </div>
                 ))}
