@@ -1,0 +1,52 @@
+.slogan-marquee {
+    background-color: var(--base-charcoal);
+    padding: 3rem 1rem;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 107, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.slogan-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan-text {
+    font-family: 'SolaimanLipi', var(--font-main);
+    font-size: 1.8rem;
+    color: var(--base-white);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    animation: fadeInOut 5s infinite;
+}
+
+.slogan-author {
+    color: var(--brand-orange);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

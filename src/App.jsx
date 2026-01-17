@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
+import SloganMarquee from './sections/SloganMarquee';
 import BaniSection from './sections/BaniSection';
 import CEOWithKhala from './sections/CEOWithKhala';
 import CEOWithMembers from './sections/CEOWithMembers';
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <SloganMarquee />
         <BaniSection />
         <CEOWithKhala />
         <CEOWithMembers />
