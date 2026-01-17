@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
+
+:root {
+  /* Primitive Colors - The Brand Palette */
+  --brand-orange: #FF6B00;
+  --brand-orange-hover: #E65E00;
+
+  --base-charcoal: #121212;
+  --base-charcoal-light: #1E1E1E;
+
+  --base-white: #ffffff;
+  --base-off-white: #F4F4F4;
+  --base-cream: #F9F9F7;
+
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Oswald', sans-serif;
+
+  /* Semantic Variables - Light Theme (Default) */
+  --bg-primary: var(--base-cream);
+  --bg-secondary: var(--base-white);
+  --bg-inverse: var(--base-charcoal);
+
+  --text-primary: var(--base-charcoal);
+  --text-secondary: #555555;
+  --text-inverse: var(--base-white);
+  --text-accent: var(--brand-orange);
+
+  --border-color: rgba(0, 0, 0, 0.08);
+
+  /* UI Elements */
+  --btn-primary-bg: var(--brand-orange);
+  --btn-primary-text: var(--base-white);
+
+  /* Layout */
+  --spacing-container: 1200px;
+  --spacing-section: 6rem;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Theme Overrides */
+[data-theme='dark'] {
+  --bg-primary: var(--base-charcoal);
+  --bg-secondary: var(--base-charcoal-light);
+  --bg-inverse: var(--base-white);
+
+  --text-primary: var(--base-white);
+  --text-secondary: #AAAAAA;
+  --text-inverse: var(--base-charcoal);
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Global Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container Utility */
+.container {
+  max-width: var(--spacing-container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}

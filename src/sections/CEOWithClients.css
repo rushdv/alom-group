@@ -1,0 +1,93 @@
+.clients-section {
+    background-color: var(--base-charcoal);
+    padding: var(--spacing-section) 20px;
+    color: var(--base-white);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.clients-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.clients-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.clients-title span {
+    color: var(--brand-orange);
+}
+
+.clients-subtitle {
+    color: var(--brand-orange);
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+}
+
+.client-card {
+    background: var(--base-charcoal-light);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-orange);
+}
+
+.client-type-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.interaction-block {
+    margin-bottom: 1.5rem;
+}
+
+.interaction-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+}
+
+.client-says {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #444;
+}
+
+.ceo-replies {
+    font-family: 'SolaimanLipi', var(--font-main);
+    color: var(--brand-orange);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    background: rgba(255, 107, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+}
