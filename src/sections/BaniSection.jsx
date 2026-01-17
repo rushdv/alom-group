@@ -47,7 +47,7 @@ const BaniSection = () => {
                     <div key={quote.id} className="bani-card">
                         <span className="quote-icon">“</span>
                         <p className="bani-text">{quote.text}</p>
-                        <span className="bani-author">- মফিকুল আলম <span>(CEO)</span></span>
+                        <span className="bani-author">- মাফিকুল আলম <span>(CEO)</span></span>
                     </div>
                 ))}
             </div>
