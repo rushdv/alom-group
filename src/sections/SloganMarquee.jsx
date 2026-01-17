@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './SloganMarquee.css';
 
 const slogans = [
     "meal rate কমানো কোনো কৃপণতা না, এটা সবাইকে চাঙ্গে উঠানোর ব্যবস্থাপনা।",
@@ -19,10 +18,14 @@ const SloganMarquee = () => {
     }, []);
 
     return (
-        <div className="slogan-marquee">
-            <div className="slogan-container">
-                <p className="slogan-text">{slogans[index]}</p>
-                <span className="slogan-author">Mafikul Alom</span>
+        <div className="bg-base-charcoal py-12 px-4 overflow-hidden border-y border-brand-orange/30">
+            <div className="max-w-[900px] mx-auto text-center min-h-[120px] flex flex-col justify-center items-center">
+                <p className="font-solaiman text-xl md:text-3xl text-base-white leading-relaxed mb-4 font-semibold animate-fadeInOut">
+                    {slogans[index]}
+                </p>
+                <span className="text-brand-orange font-oswald uppercase tracking-[2px] text-sm opacity-80">
+                    Mafikul Alom
+                </span>
             </div>
         </div>
     );
