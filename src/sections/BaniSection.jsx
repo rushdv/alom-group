@@ -1,5 +1,4 @@
 import React from 'react';
-import './BaniSection.css';
 
 const quotes = [
     {
@@ -39,10 +38,10 @@ const BaniSection = () => {
         <section className="bani-section">
             <div className="bani-header">
                 <p className="bani-subtitle">Words of Wisdom</p>
-                <h2 className="bani-title"><span>বানী'স</span> of CEO</h2>
+                <h2 className="bani-title"><span>বানী'স</span> of CEO</h2> 
             </div>
 
-            <div className="bani-grid">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
                 {quotes.map((quote) => (
                     <div key={quote.id} className="bani-card">
                         <span className="quote-icon">“</span>

@@ -1,105 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
+@import "tailwindcss";
 
-:root {
-  /* Primitive Colors - The Brand Palette */
-  --brand-orange: #FF6B00;
-  --brand-orange-hover: #E65E00;
+@theme {
+  --color-brand-orange: #FF6B00;
+  --color-brand-orange-hover: #E65E00;
+  --color-base-charcoal: #121212;
+  --color-base-charcoal-light: #1E1E1E;
+  --color-base-white: #ffffff;
+  --color-base-off-white: #F4F4F4;
+  --color-base-cream: #F9F9F7;
 
-  --base-charcoal: #121212;
-  --base-charcoal-light: #1E1E1E;
+  --font-inter: "Inter", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-solaiman: "SolaimanLipi", sans-serif;
 
-  --base-white: #ffffff;
-  --base-off-white: #F4F4F4;
-  --base-cream: #F9F9F7;
-
-  /* Typography */
-  --font-main: 'Inter', sans-serif;
-  --font-heading: 'Oswald', sans-serif;
-
-  /* Semantic Variables - Light Theme (Default) */
-  --bg-primary: var(--base-cream);
-  --bg-secondary: var(--base-white);
-  --bg-inverse: var(--base-charcoal);
-
-  --text-primary: var(--base-charcoal);
-  --text-secondary: #555555;
-  --text-inverse: var(--base-white);
-  --text-accent: var(--brand-orange);
-
-  --border-color: rgba(0, 0, 0, 0.08);
-
-  /* UI Elements */
-  --btn-primary-bg: var(--brand-orange);
-  --btn-primary-text: var(--base-white);
-
-  /* Layout */
   --spacing-container: 1200px;
   --spacing-section: 6rem;
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --radius-card: 16px;
+
+  --animate-fadeInOut: fadeInOut 5s infinite;
+
+  @keyframes fadeInOut {
+
+    0%,
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    10%,
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
-/* Dark Theme Overrides */
-[data-theme='dark'] {
-  --bg-primary: var(--base-charcoal);
-  --bg-secondary: var(--base-charcoal-light);
-  --bg-inverse: var(--base-white);
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
 
-  --text-primary: var(--base-white);
-  --text-secondary: #AAAAAA;
-  --text-inverse: var(--base-charcoal);
+  body {
+    @apply font-inter bg-base-charcoal text-base-white antialiased;
+  }
 
-  --border-color: rgba(255, 255, 255, 0.1);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-oswald uppercase;
+  }
 }
 
-/* Global Reset & Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Container Utility */
-.container {
-  max-width: var(--spacing-container);
-  margin: 0 auto;
-  padding: 0 2rem;
+/* Custom Utilities */
+@utility text-shadow-glow {
+  text-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
 }
