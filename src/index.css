@@ -1,34 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
+@theme {
+  --color-brand-orange: #FF6B00;
+  --color-brand-orange-hover: #E65E00;
+  --color-base-charcoal: #121212;
+  --color-base-charcoal-light: #1E1E1E;
+  --color-base-white: #ffffff;
+  --color-base-off-white: #F4F4F4;
+  --color-base-cream: #F9F9F7;
 
-:root {
-  --font-main: 'Inter', sans-serif;
-  --font-heading: 'Oswald', sans-serif;
-}
+  --font-inter: "Inter", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-solaiman: "SolaimanLipi", sans-serif;
 
-body {
-  font-family: var(--font-main);
-  background-color: #121212;
-  /* base-charcoal */
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-}
+  --spacing-container: 1200px;
+  --spacing-section: 6rem;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-}
+  --radius-card: 16px;
 
-/* Custom Utilities for Sarcastic Polish */
-@layer utilities {
-  .text-shadow-glow {
-    text-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+  --animate-fadeInOut: fadeInOut 5s infinite;
+
+  @keyframes fadeInOut {
+
+    0%,
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    10%,
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
+
+  body {
+    @apply font-inter bg-base-charcoal text-base-white antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-oswald uppercase;
+  }
+}
+
+/* Custom Utilities */
+@utility text-shadow-glow {
+  text-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
 }
